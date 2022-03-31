@@ -1,6 +1,7 @@
 
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+from rest_framework import serializers
+from . import models
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
@@ -11,3 +12,10 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         # Add custom claims
         token['username'] = user.username
         return token
+
+
+class TagIdNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Tag
+        fields = ("id", "name")
+        depth = 1
