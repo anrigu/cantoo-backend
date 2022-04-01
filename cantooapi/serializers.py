@@ -17,5 +17,6 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class TagIdNameSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Tag
-        fields = ("id", "name")
+        fields = ['id', 'name']
+        print(fields)
         depth = 1

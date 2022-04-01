@@ -14,5 +14,5 @@ class MyObtainTokenPairView(TokenObtainPairView):
 
 class TagList(ListCreateAPIView):
     # Retrieve, update, or delete a tag suggestion
-    queryset = Tag.objects.all()
+    queryset = Tag.objects.all().order_by('id')
     serializer_class = TagIdNameSerializer
