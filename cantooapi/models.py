@@ -17,8 +17,17 @@ class User(models.Model):
         return self.name
 
 class Tag(models.Model):
-    # Can add more school attributes (e.g. public/private, location, ranking) later on
-    id = models.IntegerField(unique=True, null=False, primary_key=True)
+    id = models.IntegerField(unique=False, null=False, primary_key=True)
+    name = models.CharField(max_length=128, null=False, blank=False)
+    
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class InterestTag(models.Model):
+    id = models.IntegerField(unique=False, null=False, primary_key=True)
     name = models.CharField(max_length=128, null=False, blank=False)
     
     class Meta:

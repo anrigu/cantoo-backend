@@ -18,5 +18,10 @@ class TagIdNameSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Tag
         fields = ['id', 'name']
-        print(fields)
+        depth = 1
+
+class InterestTagIdNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.InterestTag
+        fields = ['id', 'name']
         depth = 1
