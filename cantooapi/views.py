@@ -187,52 +187,53 @@ def interestQuizAlgorithm(interest_arr):
                         "Discovering medical solutions":"I", "Filming movies":"A"}
     counter = 0
     try:
-        for i in interest_arr: 
-            if counter == 0 & j == "Writing stories":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 1 & j == "Preparing legal documents":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 4 & j == "Analyzing people":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 6 & j == "Judging legal cases":
-                interest_dict[Interest_item_txt_dict[i]] += 3
-            elif counter == 6 & j == "Preparing data":
-                interest_dict[Interest_item_txt_dict[i]] += 0
-            elif counter == 12 & j == "Starting a business":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 14 & j == "Treating diseases":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 20 & j == "Investigating stories":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 21 & j == "Organizing inventory":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 23 & j == "Overseeing budgets":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 26 & j == "Preparing legal documents":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 29 & j == "Studying planets":
-                interest_dict[Interest_item_txt_dict[i]] += 0
-            elif counter == 34 & j == "Managing a large department":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 35 & j == "Maintaining office supplies":
-                interest_dict[Interest_item_txt_dict[i]] += 3
-            elif counter == 39 & j == "Developing a spreadsheet":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 40 & j == "Analyzing people":
-                interest_dict[Interest_item_txt_dict[i]] += 0
-            elif counter == 41 & j == "Proofreading documents":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 42 & j == "Buying stocks":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 43 & j == "Appointing department heads":
-                interest_dict[Interest_item_txt_dict[i]] += 2
-            elif counter == 44 & j == "Discovering medical solutions":
-                interest_dict[Interest_item_txt_dict[i]] += 3    
+        for j in interest_arr: 
+            if counter == 0 and j == "Writing stories":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 1 and j == "Preparing legal documents":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 4 and j == "Analyzing people":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 6 and j == "Judging legal cases":
+                interest_dict[Interest_item_txt_dict[j]] += 3
+            elif counter == 6 and j == "Preparing data":
+                interest_dict[Interest_item_txt_dict[j]] += 0
+            elif counter == 12 and j == "Starting a business":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 14 and j == "Treating diseases":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 20 and j == "Investigating stories":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 21 and j == "Organizing inventory":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 23 and j == "Overseeing budgets":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 26 and j == "Preparing legal documents":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 29 and j == "Studying planets":
+                interest_dict[Interest_item_txt_dict[j]] += 0
+            elif counter == 34 and j == "Managing a large department":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 35 and j == "Maintaining office supplies":
+                interest_dict[Interest_item_txt_dict[j]] += 3
+            elif counter == 39 and j == "Developing a spreadsheet":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 40 and j == "Analyzing people":
+                interest_dict[Interest_item_txt_dict[j]] += 0
+            elif counter == 41 and j == "Proofreading documents":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 42 and j == "Buying stocks":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 43 and j == "Appointing department heads":
+                interest_dict[Interest_item_txt_dict[j]] += 2
+            elif counter == 44 and j == "Discovering medical solutions":
+                interest_dict[Interest_item_txt_dict[j]] += 3    
             else:
-                interest_dict[Interest_item_txt_dict[i]] += 1
+                interest_dict[Interest_item_txt_dict[j]] += 1
             counter = counter + 1
     except Exception as e:
         print(e)
 
     interest_dict = dict(sorted(interest_dict.items(), key=lambda item: item[1], reverse = True))
+    print(interest_dict)
     return list(interest_dict.keys())[0:3]
